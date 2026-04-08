@@ -1,0 +1,643 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Theme: Arcade Planet
+version: 0.99.2
+author: Mickaël Isman (EvilDindon Ken)
+license: creative commons CC-BY-NC-SA
+originally based on: "carbon"
+-->
+<theme defaultView="detailed">
+
+  <formatVersion>7</formatVersion>
+  
+<!-- VARIABLES -->
+  
+	<variables>
+		
+	<!--LANGS-->
+	<artworkregion>Logos and Artwork Region</artworkregion>
+	<artworkregion lang="fr">Région des Logos et Artworks</artworkregion>
+	
+	<SystemViewStyle>System View Style</SystemViewStyle>
+    <SystemViewStyle lang="fr">Style de Vue Système</SystemViewStyle>
+	
+	<SystemLogoCountH>System View Horizontal Logo Count</SystemLogoCountH>
+	<SystemLogoCountH lang="fr">Nombre de Logos Dans Vue Système Horizontale</SystemLogoCountH>
+	
+	<HorizontalSimplified>Horizontal Simplified</HorizontalSimplified>
+    <HorizontalSimplified lang="fr">Horizontal Simplifié</HorizontalSimplified>
+	
+	<SystemLogoCountV>System View Vertical Logo Count</SystemLogoCountV>
+	<SystemLogoCountV lang="fr">Nombre de Logos Dans Vue Système Verticale</SystemLogoCountV>	
+	
+	<LogoColor>Active Logo Color</LogoColor>
+    <LogoColor lang="fr">Couleur du Logo Actif</LogoColor>
+	
+	<logostyle>Logo Style</logostyle>
+    <logostyle lang="fr">Style de logos</logostyle>
+	
+	<SelectorColor>Selector Color</SelectorColor>
+    <SelectorColor lang="fr">Couleur du selecteur</SelectorColor>
+	
+	<selectorstyle>Selector Style</selectorstyle>
+	<selectorstyle lang="fr">Type de selecteur</selectorstyle>
+	
+	<bar>Bar</bar>
+	<bar lang="fr">Barre</bar>
+	
+	<TextListColor>Text Color in Gamelists</TextListColor>
+    <TextListColor lang="fr">Couleur du Texte dans la Liste de Jeux</TextListColor>
+	
+	<animatedgamelistopenings>Animated Gamelist Openings</animatedgamelistopenings>
+	<animatedgamelistopenings lang="fr">Animations à l'ouverture des listes de jeux</animatedgamelistopenings>
+	
+	<RandomArt>Random Artwork in System View</RandomArt>
+	<RandomArt lang="fr">Images Aléatoires dans Vue Système</RandomArt>
+	
+	<RandomArtAnimationStyle>Random Art Animation Style</RandomArtAnimationStyle>
+	<RandomArtAnimationStyle lang="fr">Images Aléatoires : Style d'animation</RandomArtAnimationStyle>
+	
+	<ScrollDirection>Scroll Direction in Grids</ScrollDirection>
+	<ScrollDirection lang="fr">Direction du Défilement des Grilles</ScrollDirection>
+	
+	<easeinandout>ease in and out</easeinandout>
+	<easeinandout lang="fr">va et vient</easeinandout>
+	
+	<crossover>crossover</crossover>
+	<crossover lang="fr">chassé-croisé</crossover>
+		            
+    <boxarts>box arts</boxarts>
+	<boxarts lang="fr">jaquettes</boxarts>
+	
+	<yes>yes</yes>
+    <yes lang="fr">oui</yes>
+            
+    <no>no</no>
+    <no lang="fr">non</no>
+	
+	<center>center</center>
+    <center lang="fr">centre</center>
+	
+	<left>left</left>
+    <left lang="fr">gauche</left>
+		
+	<color>Color</color>
+    <color lang="fr">couleur</color>
+   
+   	<none>none</none>
+    <none lang="fr">aucun</none>
+	
+    <red>red</red>
+    <red lang="fr">rouge</red>
+            
+    <blue>blue</blue>
+    <blue lang="fr">bleu</blue>
+
+    <purple>purple</purple>
+    <purple lang="fr">violet</purple>
+	
+	<green>green</green>
+    <green lang="fr">vert</green>
+	
+	<grey>grey</grey>
+    <grey lang="fr">gris</grey>
+	
+    <yellow>yellow</yellow>
+    <yellow lang="fr">jaune</yellow>
+
+	<white>white</white>
+    <white lang="fr">blanc</white>
+	
+	<black>black</black>
+    <black lang="fr">noir</black>
+	
+	<theme.aspect-ratio>aspect ratio</theme.aspect-ratio>
+    <theme.aspect-ratio lang="fr">format d'écran</theme.aspect-ratio>
+		
+	<minilogosright>Mini Logos on right</minilogosright>
+	<minilogosright lang="fr">Mini Logos à Droite</minilogosright>
+	
+	<boxcarousel>Box Carousel</boxcarousel>
+	<boxcarousel lang="fr">Carousel de Boîtes</boxcarousel>
+			
+	<doubleboxcarousel>Double Box Carousel</doubleboxcarousel>
+	<doubleboxcarousel lang="fr">Double Carousel de Boîtes</doubleboxcarousel>
+	
+	<retrotiles>Retro Tiles</retrotiles>
+	<retrotiles lang="fr">Tuiles Rétro</retrotiles>
+	
+	<gamelistalignment>Gamelist Text Alignment</gamelistalignment>
+	<gamelistalignment lang="fr">Alignement du Texte des Listes de Jeux</gamelistalignment>
+	
+  </variables>
+  
+   <!-- Subset options for Regional Artwork and Logos -->
+	<subset name="artworkregion" displayName="${artworkregion}">
+		<include name="EU"/>
+		<include name="US"/>
+	</subset>
+	
+<!-- Subset options for Animation at gamelist opening -->
+	<subset name="animatedgamelistopenings" displayName="${animatedgamelistopenings}">
+		<include name="no" displayName="${no}"/>
+		<include name="yes" displayName="${yes}"/>
+	</subset>
+	
+	<!-- Subset options for Neo Geo Artwork Style -->
+	<subset name="neogeostyle" displayName="Neo-Geo Style">
+		<include name="aes" displayName="AES (Console)"/>
+		<include name="mvs" displayName="MVS (Arcade)"/>
+	</subset>
+
+	<!-- Subset options for Text Alignment in Game Lists -->
+	<subset name="gamelistalignment" displayName="${gamelistalignment}" appliesTo="detailed,video">
+		<include name="center" displayName="${center}"/>
+		<include name="left" displayName="${left}"/>
+	</subset>
+	
+	<!-- Subset options for Selector Style -->
+	<subset name="selectorstyle" displayName="${selectorstyle}" appliesTo="basic,detailed,video">
+		<include name="bar" displayName="${bar}"/>
+		<include name="none" displayName="${none}"/>
+	</subset>
+
+	<!-- Subset options for Selector Bar Color -->
+	<subset name="selectorcolor" displayName="${SelectorColor}" appliesTo="basic,detailed,video,NeoDetailed,NeoNeoDetailedAlt">
+		<include name="blue" displayName="${blue}"/>
+		<include name="red" displayName="${red}"/>
+		<include name="yellow" displayName="${yellow}"/>
+		<include name="purple" displayName="${purple}"/>
+	    <include name="black" displayName="${black}"/>
+		<include name="grey" displayName="${grey}"/>
+	</subset>
+	
+	<!-- Subset options for Selected Text -->
+	<subset name="textlistcolor" displayName="${TextListColor}" appliesTo="basic,detailed,video,NeoNeoDetailedAlt,NeoDetailed">
+		<include name="white" displayName="${white}"/>
+		<include name="blue" displayName="${blue}"/>
+		<include name="yellow" displayName="${yellow}"/>
+		<include name="red" displayName="${red}"/>
+		<include name="purple" displayName="${purple}"/>
+	</subset>
+	
+<!-- MENU -->
+	
+  <view name="menu">
+  
+    <menuText name="menutitle">
+      <fontPath>./_art/fonts/SairaCondensed-Bold.ttf</fontPath>
+      <fontSize>0.046</fontSize>
+      <color>FFFFFF</color>
+    </menuText>
+	
+    <menuText name="menufooter">
+      <fontPath>./_art/fonts/SairaCondensed-Light.ttf</fontPath>
+      <fontSize>0.032</fontSize>
+      <color>777777FF</color>
+    </menuText>
+	
+    <menuText name="menutext">
+      <fontPath>./_art/fonts/SairaCondensed-Regular.ttf</fontPath>
+      <fontSize>0.032</fontSize>
+      <color>969696</color>
+      <separatorColor>323232FF</separatorColor>
+      <selectorColor>56529688</selectorColor>
+	  <selectorColorEnd>56529688</selectorColorEnd>
+      <selectedColor>EEEEFF</selectedColor>
+	  <selectorOffsetY>0.01</selectorOffsetY>
+      <selectorGradientType>vertical</selectorGradientType>
+    </menuText>
+	
+    <menuTextSmall name="menutextsmall">
+      <fontPath>./_art/fonts/SairaCondensed-Regular.ttf</fontPath>
+      <fontSize>0.026</fontSize>
+      <color>767296</color>
+    </menuTextSmall>
+	
+    <menuGroup name="menugroup">
+      <fontPath>./_art/fonts/SairaCondensed-Medium.ttf</fontPath>
+      <fontSize>0.036</fontSize>
+      <color>EEEEEE</color>
+      <separatorColor>888888FF</separatorColor>    
+      <backgroundColor>343434BB</backgroundColor>
+      <lineSpacing>2.5</lineSpacing>
+    </menuGroup>
+	
+    <menuBackground name="menubg">
+      <color>242424cc</color>
+      <cornerSize>32 32</cornerSize>
+      <path>./_art/menuicons/frame.png</path>
+    </menuBackground>
+	
+    <menuIcons name="menuicons">
+      <iconKodi>./_art/menuicons/Kodi.png</iconKodi>
+      <iconSystem>./_art/menuicons/System.png</iconSystem>
+      <iconUpdates>./_art/menuicons/Updates.png</iconUpdates>
+      <iconGames>./_art/menuicons/Games.png</iconGames>
+      <iconControllers>./_art/menuicons/Controllers.png</iconControllers>
+      <iconUI>./_art/menuicons/UI.png</iconUI>
+      <iconSound>./_art/menuicons/Sound.png</iconSound>
+      <iconNetwork>./_art/menuicons/Network.png</iconNetwork>
+      <iconScraper>./_art/menuicons/Scraper.png</iconScraper>
+      <iconAdvanced>./_art/menuicons/Advanced.png</iconAdvanced>
+      <iconQuit>./_art/menuicons/Quit.png</iconQuit>
+      <iconRestart>./_art/menuicons/Restart.png</iconRestart>
+      <iconShutdown>./_art/menuicons/Shutdown.png</iconShutdown>
+      <iconFastShutdown>./_art/menuicons/Fastshutdown.png</iconFastShutdown>
+      <iconRetroachievements>./_art/menuicons/Contest.png</iconRetroachievements>
+    </menuIcons>
+	
+    <menuTextEdit name="menutextedit">
+      <inactive>./_art/menuicons/textinput_ninepatch.png</inactive>
+      <active>./_art/menuicons/textinput_ninepatch_active.png</active>
+    </menuTextEdit>
+	
+    <menuButton name="menubutton">
+      <path>./_art/menuicons/button.png</path>
+      <filledPath>./_art/menuicons/button_filled.png</filledPath>
+    </menuButton>
+	
+  </view>
+ 
+<!-- SCREEN Elements -->
+ 
+  <view name="screen">
+    
+	<text name="clock">
+      <color>786078</color>
+	  <fontPath>./_art/fonts/SairaCondensed-Light.ttf</fontPath>
+      <fontSize>0.028</fontSize>
+      <pos>0.995 0.991</pos>
+	  <origin>1 0.5</origin>
+      <size>0.09 0.058</size>
+      <alignment>right</alignment>
+    </text>
+    
+	<controllerActivity name="controllerActivity">
+      <pos>0.005 0.972</pos>
+	  <origin>0 0</origin>
+      <size>0.023</size>
+      <itemSpacing>0.003</itemSpacing>
+      <imagePath>./_art/icons/gamepad.svg</imagePath>
+	  <gunPath>./art/gun.svg</gunPath>
+      <color>686068aa</color>
+      <activityColor>A0A0FFC0</activityColor>
+      <hotkeyColor>FFA0A0C0</hotkeyColor>
+    </controllerActivity>
+	
+<!-- 	<batteryIndicator name="batteryIndicator">
+      <pos>0.02 0.976</pos>
+      <size>0.3</size>
+      <horizontalAlignment>left</horizontalAlignment>
+      <incharge>./_art/icons/incharge.svg</incharge>
+      <full>./_art/icons/full.svg</full>
+      <at75>./_art/icons/75.svg</at75>
+      <at50>./_art/icons/50.svg</at50>
+      <at25>./_art/icons/25.svg</at25>
+      <empty>./_art/icons/empty.svg</empty>
+      <planemodeIcon>./_art/icons/Planemode.png</planemodeIcon>
+      <color>686068aa</color>
+    </batteryIndicator> -->
+	
+  </view>
+  
+  <!-- SYSTEM VIEW Common Elements -->
+  
+  <view name="system">
+ 
+    <sound name="bgsound">
+		<path>./_art/music/ArcadePlanetBGMusic.mp3</path>
+	</sound>
+	
+	<helpsystem name="help">
+	  <pos>0.5 0.976</pos>
+	  <size>1 0.01</size>
+	  <origin>0.5 0.5</origin>
+	  <fontPath>./_art/fonts/Saira_ExtraCondensed-Regular.ttf</fontPath>
+	  <fontSize>0.042</fontSize>
+	  <fontSize tinyScreen="true">0.036</fontSize>
+	  <textColor>686068</textColor>
+      <iconColor>565296</iconColor>
+	  <iconA>:/help/buttons_east.svg</iconA>
+      <iconB>:/help/buttons_south.svg</iconB>
+      <iconX>:/help/buttons_north.svg</iconX>
+      <iconY>:/help/buttons_west.svg</iconY>
+    </helpsystem>
+	
+    <text name="logoText">
+		<fontPath>./_art/fonts/SairaCondensed-SemiBold.ttf</fontPath>
+		<color>FFFFFF</color>
+		<fontSize>0.044</fontSize>
+	    <forceUppercase>1</forceUppercase>
+		<glowSize>3</glowSize>
+		<glowColor>000000ee</glowColor>
+		<glowOffset>1</glowOffset>
+		<zIndex>80</zIndex>
+    </text>
+	
+	<image name="bgsky" extra="static">
+      <pos>1 0.324</pos>
+      <size>2 0</size>
+      <origin>0.5 0.5</origin>
+      <path>./_art/backgrounds/bgsky.jpg</path>
+	  <color>AAAAAA</color>
+      <zIndex>0</zIndex>
+      <storyboard repeat="forever">
+            <animation property="x" from="1" to="0" begin="" duration="80000" mode="Linear" autoReverse="true"/>
+			<animation property="y" from="0.324" to="-0.07" begin="" duration="80000" mode="Linear" autoReverse="true"/>
+	  </storyboard>	  	  
+    </image>
+	
+	<carousel name="systemcarousel">
+	  <color>00000000</color>
+      <colorEnd>00000000</colorEnd>
+	  <systemInfoDelay>0</systemInfoDelay>
+    </carousel>
+	
+	<image name="Chevron droite, Chevron gauche, Chevron Haut, Chevron Bas" extra="static">
+      <origin>0.5 0.5</origin>
+	  <color>D0D0D0</color>
+	  <path>./_art/assets/chevron-arrows-svgrepo-com.svg</path>
+      <linearSmooth>true</linearSmooth>
+	  <zIndex>41</zIndex>
+	</image>
+			
+  </view>
+  
+<!-- COMMON ELEMENTS in Gamelist Views -->
+  
+  <view name="basic,detailed,video,gamecarousel,grid">
+    
+  	<helpsystem name="help">
+	  <pos>0.5 0.952</pos>
+	  <size>1 0.01</size>
+	  <origin>0.5 0.5</origin>
+	  <fontPath>./_art/fonts/Saira_ExtraCondensed-Regular.ttf</fontPath>
+	  <fontSize>0.035</fontSize>
+	  <textColor>686068</textColor>
+      <iconColor>565296</iconColor>
+	  <iconA>:/help/buttons_east.svg</iconA>
+      <iconB>:/help/buttons_south.svg</iconB>
+      <iconX>:/help/buttons_north.svg</iconX>
+      <iconY>:/help/buttons_west.svg</iconY>
+    </helpsystem>
+    
+	<image name="background, background2, black screen">
+	  <pos>0 0</pos>
+     	  <origin>0 0</origin>
+          <size>1 1</size>
+	  <linearSmooth>true</linearSmooth>	  
+	</image>
+	
+	<image name="black screen" extra="true" ifSubset="animatedgamelistopenings:yes">
+	  <path>./_art/assets/white.png</path>
+	  <color>000000ff</color>
+	  <tile>true</tile>
+	  <opacity>1</opacity>
+	  <linearSmooth>false</linearSmooth>	  
+	  <storyboard>
+			<animation property="opacity" from="1" to="0" begin="0" duration="1500" mode="Linear"/>
+     	  </storyboard>
+	  <zIndex>200</zIndex>
+	</image>
+
+    <image name="logo">
+	  <linearSmooth>true</linearSmooth>
+      <path>./_art/Colorlogos/${system.theme}.png</path>
+      <path>./_art/Colorlogos/${system.theme}.svg</path>
+      <path ifSubset="artworkregion:US">./_art/Colorlogos/US/${system.theme}.png</path>
+      <path ifSubset="artworkregion:US">./_art/Colorlogos/US/${system.theme}.svg</path>
+	  <path ifSubset="neogeostyle:mvs">./_art/Colorlogos/special/${system.theme}.png</path>	 
+	  <pos ifSubset="animatedgamelistopenings:yes">0.5 0.5</pos>
+      <origin>0.5 0.5</origin>
+	  <zIndex>201</zIndex>
+	 </image>
+	
+	<image name="Controller, Controller1, Controller2">
+	  	<linearSmooth>true</linearSmooth>
+      		<origin>0.5 0.5</origin>
+	       	<path>./_art/controllers/default.png</path>
+     		<path>./_art/controllers/${system.theme}.png</path>
+      		<path ifSubset="artworkregion:US">./_art/controllers/default.png</path>
+     		<path ifSubset="artworkregion:US">./_art/controllers/${system.theme}.png</path>
+			<path ifSubset="artworkregion:US">./_art/controllers/US/${system.theme}.png</path>
+			<path ifSubset="neogeostyle:mvs">./_art/controllers/special/${system.theme}.png</path>
+	  	<zIndex>101</zIndex>
+	</image>
+	
+	<image name="Chevron Bas, Chevron Haut, Chevron gauche, Chevron droite">
+      <origin>0.5 0.5</origin>
+      <size>0.01875 0</size>
+	  <color>DDDDDD</color>
+	  <path>./_art/assets/chevron-arrows-svgrepo-com.svg</path>
+      <linearSmooth>true</linearSmooth>
+      <zIndex>41</zIndex>
+	</image>
+	
+	<image name="Chevron Bas" extra="true">
+	  <flipY>true</flipY>
+	  <rotation>0</rotation>
+      <storyboard repeatAt="1">
+            <animation property="offsetY" from="0" to="0.01" begin="" duration="115" mode="Linear" autoReverse="true" repeat="2"/>
+			<animation property="offsetY" from="0" to="0" begin="2460" duration="1000" mode="Linear"/>
+	  </storyboard>
+	</image>
+	
+	<image name="Chevron Haut" extra="true">
+	  <flipY>false</flipY>
+	  <rotation>0</rotation>
+      <storyboard repeatAt="1">
+            <animation property="offsetY" from="0" to="-0.01" begin="3000" duration="115" mode="Linear" autoReverse="true" repeat="2"/>
+	  </storyboard>
+	</image>
+	
+	<image name="Chevron droite" extra="true">
+		<flipY>false</flipY>
+		<rotation>90</rotation>
+		<storyboard repeatAt="1">
+            <animation property="offsetX" from="0" to="0.01" begin="" duration="115" mode="Linear" autoReverse="true" repeat="2"/>
+			<animation property="offsetX" from="0" to="0" begin="2460" duration="1000" mode="Linear"/>
+	  </storyboard>
+	</image>
+	
+	<image name="Chevron gauche" extra="true">
+	  <flipY>false</flipY>
+	  <rotation>-90</rotation>
+      <storyboard repeatAt="1">
+            <animation property="offsetX" from="0" to="-0.01" begin="3000" duration="115" mode="Linear" autoReverse="true" repeat="2"/>
+	  </storyboard>
+	</image>
+	
+	<image name="md_thumbnail">
+	  <default>./_art/assets/noboxart.png</default>
+	  <linearSmooth>true</linearSmooth>
+	  <origin>0.5 0.5</origin>
+      <reflexion>0.3 0.0</reflexion>
+	  <zIndex>11</zIndex>	  
+	</image>
+	
+	<image name="md_marquee">
+	  <default>./_art/assets/nologo.png</default>	  
+	</image>
+	
+	<image name="md_image">
+		<visible>false</visible>
+	</image>
+	
+	<video name="md_video">
+      <origin>0.5 0.5</origin>
+	  <maxSize>0.43125 0.509</maxSize>
+	  <delay>0.1</delay>
+	  <effect>none</effect>
+      <showSnapshotNoVideo>true</showSnapshotNoVideo>
+	  <delay>0.7</delay>
+	  <showSnapshotDelay>true</showSnapshotDelay>
+	  <snapshotSource>image</snapshotSource>
+      <loops>2</loops>
+      <roundCorners>0</roundCorners>
+	  <zIndex>3</zIndex>	  
+	</video>
+	
+	<image name="md_flag">
+		<color>D8D8D8</color>
+	</image>
+	
+	<image name="md_hidden,md_kidgame,md_favorite,md_flag,md_manual,md_cheevos,md_savestate">
+	  <linearSmooth>true</linearSmooth>
+	  <origin>0.5 0.5</origin>
+	  <zIndex>150</zIndex>	  
+	</image>
+	
+	<image name="md_nomanual,md_notcheevos,md_nosavestate">
+	  <linearSmooth>true</linearSmooth>
+	  <origin>0.5 0.5</origin>
+      <color>808080F0</color>
+	  <zIndex>149</zIndex>	  
+	</image>
+	
+	<image name="md_notkidgame,ghostcheevos,ghostfavorite,ghostmanual,ghostsavestate,ghosthidden" extra="true">
+	  <linearSmooth>true</linearSmooth>
+	  <origin>0.5 0.5</origin>
+	  <color>76767640</color>
+	  <zIndex>148</zIndex>	  
+	</image>
+	
+	<image name="md_hidden,ghosthidden">
+      <path>./_art/icons/hidden.svg</path>
+    </image>
+	
+    <image name="md_kidgame,md_notkidgame">
+      <path>./_art/icons/kid.svg</path>
+    </image>
+	
+	<image name="md_kidgame">
+	  <color>994444</color>
+    </image>
+		
+    <image name="md_favorite,ghostfavorite">
+	      <path>./_art/icons/favorite.svg</path>
+	</image>
+	
+	<image name="md_favorite">
+      <color>960000</color>
+	</image>
+		
+	<image name="md_manual,md_nomanual,ghostmanual">
+			<path>./_art/icons/manual.svg</path>
+	</image>
+	
+	<image name="md_manual">
+			<color>009600</color>
+	</image>
+		
+	<image name="md_cheevos,md_notcheevos,ghostcheevos">
+			<path>./_art/icons/cheevos.png</path>
+	</image>
+	
+	<image name="md_cheevos">
+			<color>969600</color>
+	</image>
+			
+	<image name="md_savestate,md_nosavestate,ghostsavestate">
+			<path>./_art/icons/SaveState.png</path>
+	</image>
+	
+	<image name="md_savestate">
+			<color>0022FF</color>
+	</image>
+					
+	<text name="md_description">
+      <origin>0.5 0.5</origin>
+      <color>E0E0E0ff</color>
+      <forceUppercase>0</forceUppercase>
+      <fontPath>./_art/fonts/Bank Gothic Medium.otf</fontPath>
+      <fontSize>0.023</fontSize>
+	  <glowColor>00000080</glowColor>
+	  <glowSize>1</glowSize>
+	  <lineSpacing>1.15</lineSpacing>
+	  <glowOffset>1</glowOffset>
+      <zIndex>15</zIndex>
+		<storyboard>
+                <animation property="opacity" from="0" to="0" duration="600" mode="Linear"/>
+				<animation property="opacity" from="0" to="1" begin="600" duration="1500" mode="Linear"/>
+		</storyboard>
+    </text>
+	
+	<text name="md_developer">
+      <color>4480AA</color>
+	  <forceUppercase>0</forceUppercase>
+	  <glowColor>00000016</glowColor>
+      <glowSize>2</glowSize>
+	  <zIndex>41</zIndex>
+	</text>
+	
+	<datetime name="md_releasedate">
+      <color>d2bfa8FF</color>
+	  <format>%Y</format>
+	  <glowColor>00000016</glowColor>
+      <glowSize>2</glowSize>
+	</datetime>
+		  
+    <text name="md_lbl_rating, md_lbl_releasedate, md_lbl_developer, md_lbl_publisher, md_lbl_genre, md_lbl_playcount, md_lbl_players, md_lbl_lastplayed, md_publisher, md_lbl_gametime, md_gametime, gridtile, gridtile:selected">
+		  <pos>1.5 1.5</pos>
+	      <visible>false</visible>
+	</text>
+	
+	<datetime name="md_lastplayed">
+		<pos>1.5 1.5</pos>
+  		<visible>false</visible>
+	</datetime>
+			
+    </view>
+
+
+<!-- Subset for Aspect Ratio-->
+
+	<subset name="aspect-ratio" displayName="${theme.aspect-ratio}">
+		<include if="${screen.ratio} == '16/9'" name="16-9" displayName="16:9 widescreen">./_art/169.xml</include>
+		<include if="${screen.ratio} == '4/3'" name="4-3" displayName="4:3 standard">./_art/43.xml</include>
+		<include if="${screen.ratio} == '3/2'" name="3-2" displayName="3:2">./_art/32.xml</include>
+		<include if="${screen.ratio} == '1/1'" name="1-1" displayName="1:1">./_art/11.xml</include>
+		<include if="${screen.ratio} == '16/10'" name="16-10" displayName="16:10">./_art/1610.xml</include>
+		<include if="${screen.ratio} == '5/3'" name="5-3" displayName="5:3">./_art/1610.xml</include>
+		<include if="${screen.ratio} == '5/4'" name="5-4" displayName="5:4">./_art/54.xml</include>
+		<include name="16-9" displayName="16:9 widescreen">./_art/169.xml</include>
+		<include name="4-3" displayName="4:3 standard">./_art/43.xml</include>
+		<include name="3-2" displayName="3:2">./_art/32.xml</include>
+		<include name="1-1" displayName="1:1">./_art/11.xml</include>
+		<include name="16-10" displayName="16:10">./_art/1610.xml</include>
+		<include name="5-3" displayName="5:3">./_art/1610.xml</include>
+		<include name="5-4" displayName="5:4">./_art/54.xml</include>
+	</subset>
+
+<!-- Scaling Box Art --> 
+   
+	<customView name="detailed,NeoDetailedAlt,Verticarousel,RetroTiles">
+ 
+		<image name="md_thumbnail"> 
+			<scale if="{system.theme} == 'gb' || {system.theme} == 'gb2players' || {system.theme} == 'gbc' || {system.theme} == 'gbc2players' || {system.theme} == 'gba' || {system.theme} == 'gba2players' || {system.theme} == '3ds' || {system.theme} == 'amigacd32' || {system.theme} == 'amigacdtv' || {system.theme} == 'cdi' || {system.theme} == 'dreamcast' || {system.theme} == 'fds' || {system.theme} == 'nds' || {system.theme} == 'neogeocd' || {system.theme} == 'gb2players' || {system.theme} == 'ngp' || {system.theme} == 'ngpc' || {system.theme} == 'pce-cd' || {system.theme} == 'pcfx' || {system.theme} == 'pokemini' || {system.theme} == 'psx' || {system.theme} == 'sgb' || {system.theme} == 'virtualboy' || {system.theme} == 'gx4000' || {system.theme} == 'supergrafx'">0.79</scale>
+		</image>
+	
+	</customView>
+ 
+</theme>   
