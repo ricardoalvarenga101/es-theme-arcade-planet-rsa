@@ -55,7 +55,7 @@
 			<fontSize>0.04</fontSize>
 			<color>A00000</color>
 			<pos>0.5 0.400</pos>
-			<text>LOADING</text>			
+			<text>Carregando</text>			
 		</text>
 
 		<text lang="fr" name="Loading" extra="true">
@@ -81,7 +81,7 @@
 			<fontSize>0.013</fontSize>
 			<alignment>right</alignment>
 			<color>DDDDDD</color>
-			<text>By EvilDindon, 2021</text>
+			<text>By EvilDindon, 2021 (modified by rsa 2026)</text>
 		</text>
 			
 		<image name="progressbar">
